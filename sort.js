@@ -1,4 +1,5 @@
-// this script takes an array of strings (words) and performs a bubble sort starting from the beginning via swapping two elements when necessary.
+// this script takes an array of strings (words) and performs a bubble sort
+// starting from the beginning via swapping two elements when necessary.
 
 let changes = false;
 let strings = ['brown', 'bro', 'apple', 'watch', 'xeroz', 'xeroa',

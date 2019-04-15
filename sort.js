@@ -1,4 +1,4 @@
-alet changes = false;
+let changes = false;
 let strings = ['brown', 'bro', 'apple', 'watch', 'xeroz', 'xeroa',
   'will', 'willy', 'hello', 'hell', 'xerox', 'app'];
 

@@ -1,0 +1,51 @@
+// Converts numbers into Roman numerals. My solution to the FreeCodeCamp excercise.
+
+function convertToRoman(num) {
+
+  let fourDigit = new Object();
+
+  fourDigit.ones = convertOnes(num % 10);
+
+  if (num >= 10 && num < 100) {
+    fourDigit.tens = Number(String(num)[0]);
+  }
+  if (num >= 100 && num < 1000) {
+    fourDigit.hundreds = String(num)[0];
+    fourDigit.tens = Number(String(num)[1]);
+  }
+  if (num >= 1000 && num < 10000) {
+    fourDigit.thousands = String(num)[0];
+    fourDigit.hundreds = String(num)[1];
+    fourDigit.tens = Number(String(num)[2]);
+  }
+
+  function convertOnes(inp) {
+    let result = "";
+
+    if (inp < 4) {
+      for (let i = 0; i < inp; i++) {
+        result += "I";
+      }
+    }
+    if (inp >= 4 && inp <= 8) {
+      result = "V";
+      if (inp == 4) {
+        result = "I" + result;
+      } else if (inp > 5 && inp < 9) {
+        for (let i = 0; i < inp - 5; i++) {
+          result += "I";
+        }
+      }
+    }
+    if (inp >= 9) {
+      result = "IX";
+    }
+    return result;
+    console.log(result);
+
+  }
+
+  return fourDigit.ones;
+}
+
+console.log(convertToRoman());
